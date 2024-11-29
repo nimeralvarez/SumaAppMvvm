@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SumaAppMvvm.Views.FormulaSumaView"
+             
+             xmlns:viewModel="clr-namespace:SumaAppMvvm.ViewModels"
+             x:DataType="viewModel:FormulaSumaViewModel"
+
+             Title="Suma de dos números">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="5">
+            <Label Text="Ingrese número 1: " />
+            <Entry Text="{Binding Numero1}" Keyboard="Default" Placeholder="0" />
+
+            <Label Text="Ingrese número 2: " />
+            <Entry Text="{Binding Numero2}" Keyboard="Default" Placeholder="0" />
+
+            <Label Text="Resultado de la suma: " />
+            <Entry Text="{Binding ResultadoSuma}" IsReadOnly="True" />
+
+            <Button Text="Calcular Suma" Command="{Binding CalcularSumaCommand}" BackgroundColor="Blue" />
+            <Button Text="Limpiar" Command="{Binding LimpiarCommand}" BackgroundColor="BlueViolet" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
